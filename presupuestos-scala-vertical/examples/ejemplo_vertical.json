@@ -1,0 +1,87 @@
+{
+  "empresa": "vertical",
+  "numero": "VP-2026-003",
+  "fecha": "30/10/2026",
+  "titulo": "Rehabilitación de Cubiertas",
+  "cliente": {
+    "comunidad": "C/ Test Vertical, 1",
+    "localidad": "Valencia",
+    "provincia": "Valencia",
+    "administracion": "Administración Vertical",
+    "administracion_localidad": "Valencia"
+  },
+  "tipos_trabajo": [
+    "Cubiertas"
+  ],
+  "objeto": [
+    {
+      "titulo": "Cubierta plana",
+      "texto": "Se procede a la sustitución de la lámina bituminosa autoprotegida monocapa existente. Asimismo, se renuevan los sumideros sifónicos de PVC para garantizar la correcta evacuación de aguas pluviales."
+    },
+    {
+      "titulo": "Canalones y bajantes",
+      "texto": "Se ejecuta la limpieza de los canalones y bajantes mediante acceso con cuerda, asegurando el desagüe correcto del sistema de evacuación de la cubierta."
+    }
+  ],
+  "capitulos": [
+    {
+      "codigo": "1.06",
+      "titulo": "Impermeabilizaciones y cubiertas",
+      "partidas": [
+        {
+          "codigo": "1.06.01",
+          "resumen": "Sustitución lámina bituminosa autoprotegida monocapa cubierta plana",
+          "ud": "m²",
+          "cantidad": 120,
+          "precio": 29.38
+        }
+      ]
+    },
+    {
+      "codigo": "1.11",
+      "titulo": "Trabajos verticales VP",
+      "partidas": [
+        {
+          "codigo": "1.11.15",
+          "resumen": "Limpieza canalones bajantes acceso cuerda",
+          "ud": "m",
+          "cantidad": 25,
+          "precio": 23.6
+        }
+      ]
+    },
+    {
+      "codigo": "1.12",
+      "titulo": "Instalaciones básicas y saneamiento",
+      "partidas": [
+        {
+          "codigo": "1.12.09",
+          "resumen": "Sumidero sifón PVC cubierta plana D=110mm",
+          "ud": "ud",
+          "cantidad": 3,
+          "precio": 234.15
+        }
+      ]
+    }
+  ],
+  "iva_porcentaje": 10,
+  "margen": {
+    "porcentaje": 6,
+    "base": "total"
+  },
+  "plazo": "5-7 días",
+  "fotos": [
+    {
+      "ruta": "/mnt/user-data/uploads/foto_01.jpg",
+      "grupo": "Cubiertas"
+    },
+    {
+      "ruta": "/mnt/user-data/uploads/foto_02.jpg",
+      "grupo": "Cubiertas"
+    },
+    {
+      "ruta": "/mnt/user-data/uploads/foto_03.jpg",
+      "grupo": "Cubiertas"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "empresa": "scala",
+  "numero": "SV-2026-0001",
+  "fecha": "29/09/2026",
+  "titulo": "Rehabilitación de Cubiertas y Reparaciones Puntuales",
+  "cliente": {
+    "comunidad": "Benipeixcar 4",
+    "localidad": "Valencia",
+    "provincia": "Valencia",
+    "administracion": "Iranzo",
+    "administracion_localidad": "Valencia"
+  },
+  "tipos_trabajo": [
+    "Cubiertas",
+    "Reparaciones puntuales"
+  ],
+  "objeto": [
+    {
+      "titulo": "Cubierta plana",
+      "texto": "Se realiza la limpieza general del suelo de la cubierta y la retirada de la tela asfáltica del contorno. Posteriormente, se impermeabiliza el murete perimetral con lámina asfáltica y el suelo mediante el sistema líquido Antigoteras de Pinturas Isaval."
+    },
+    {
+      "titulo": "Zonas puntuales cubierta",
+      "texto": "Se ejecuta la sustitución de la capa de impermeabilización existente en zonas específicas de la cubierta plana no transitable, mediante la colocación de nueva lámina asfáltica autoprotegida."
+    }
+  ],
+  "diagnostico": {
+    "intro": "Tras la inspección visual realizada en Valencia, hemos identificado las siguientes patologías que requieren intervención:",
+    "patologias": [
+      {
+        "zona": "Cubierta plana (198 m²)",
+        "descripcion": "Impermeabilización deteriorada con filtraciones a las viviendas de la última planta.",
+        "gravedad": "Urgente"
+      },
+      {
+        "zona": "Murete perimetral (84 m)",
+        "descripcion": "Tela asfáltica despegada y con roturas en el encuentro con el suelo.",
+        "gravedad": "Moderada"
+      },
+      {
+        "zona": "Zonas puntuales (24 m²)",
+        "descripcion": "Lámina autoprotegida con pérdida de protección mineral.",
+        "gravedad": "Baja"
+      }
+    ],
+    "conclusion": "Las filtraciones proceden, con toda probabilidad, del deterioro de la impermeabilización en los encuentros con el murete."
+  },
+  "alertas": {
+    "incluir_en_doc": true,
+    "items": [
+      {
+        "titulo": "Estado del soporte no visible",
+        "descripcion": "No se ha podido ver el estado del forjado bajo el pavimento. Si al levantar aparecen daños se comunicará a la comunidad antes de continuar."
+      }
+    ]
+  },
+  "capitulos": [
+    {
+      "codigo": "1.01",
+      "titulo": "Demoliciones y actuaciones previas",
+      "partidas": [
+        {
+          "codigo": "1.01.21",
+          "resumen": "Limpiar suelo de cubierta",
+          "ud": "m²",
+          "cantidad": 198,
+          "precio": 3.07
+        }
+      ]
+    },
+    {
+      "codigo": "1.06",
+      "titulo": "Impermeabilizaciones y cubiertas",
+      "partidas": [
+        {
+          "codigo": "1.06.09",
+          "resumen": "Impermeabilización murete perimetral cubierta lámina asfáltica",
+          "ud": "m",
+          "cantidad": 84,
+          "precio": 60.94
+        },
+        {
+          "codigo": "1.06.19",
+          "resumen": "Retirar tela asfáltica autoprotegida del contorno de cubierta",
+          "ud": "m",
+          "cantidad": 84,
+          "precio": 12.56
+        },
+        {
+          "codigo": "1.06.20",
+          "resumen": "Impermeabilización líquida de cubiertas. Sistema Antigoteras PINTURAS ISAVAL",
+          "descripcion": "Revestimiento continuo elástico impermeabilizante con fibra de vidrio incorporada, color rojo, con un rendimiento de 1,5 l/m², y colocación de malla de fibra de vidrio de 60 g/m² de masa superficial.",
+          "ud": "m²",
+          "cantidad": 198,
+          "precio": 24.35
+        },
+        {
+          "codigo": "1.06.21",
+          "resumen": "Sustitución de capa de impermeabilización, en cubierta plana, no transitable, autoprotegida, por lámina asfáltica",
+          "descripcion": "Impermeabilización monocapa adherida, formada por una lámina de betún modificado con elastómero SBS, LBM(SBS)-50/G-FP, con armadura de fieltro de poliéster reforzado y estabilizado de 150 g/m², con autoprotección mineral de color gris totalmente adherida con soplete.",
+          "ud": "m²",
+          "cantidad": 24,
+          "precio": 88.96
+        },
+        {
+          "codigo": "1.06.30",
+          "resumen": "Revisión de sumideros",
+          "ud": "ud",
+          "cantidad": 2,
+          "precio": null,
+          "pendiente": true
+        }
+      ]
+    }
+  ],
+  "iva_porcentaje": 10,
+  "margen": {
+    "porcentaje": 0
+  },
+  "plazo": "8-12 días",
+  "num_vecinos": 12,
+  "capitulo_gratis": {
+    "activo": true,
+    "capitulo": "1.01"
+  },
+  "fotos": [
+    {
+      "ruta": "/mnt/user-data/uploads/foto_01.jpg",
+      "grupo": "Cubiertas"
+    },
+    {
+      "ruta": "/mnt/user-data/uploads/foto_02.jpg",
+      "grupo": "Cubiertas"
+    },
+    {
+      "ruta": "/mnt/user-data/uploads/foto_03.jpg",
+      "grupo": "Cubiertas"
+    },
+    {
+      "ruta": "/mnt/user-data/uploads/foto_04.jpg",
+      "grupo": "Cubiertas",
+      "pie": "Encuentro de la lámina con el murete"
+    },
+    {
+      "ruta": "/mnt/user-data/uploads/foto_05.jpg",
+      "grupo": "Reparaciones puntuales"
+    },
+    {
+      "ruta": "/mnt/user-data/uploads/foto_06.jpg",
+      "grupo": "Reparaciones puntuales"
+    },
+    {
+      "ruta": "/mnt/user-data/uploads/foto_07.jpg",
+      "grupo": "Reparaciones puntuales"
+    },
+    {
+      "ruta": "/mnt/user-data/uploads/foto_08.jpg",
+      "grupo": "Reparaciones puntuales"
+    },
+    {
+      "ruta": "/mnt/user-data/uploads/foto_09.jpg",
+      "grupo": "Reparaciones puntuales"
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "scala": {
+    "plantilla": "templates/scala.docx",
+    "empresa": {
+      "razon_social": "Scala Valencia S.L.",
+      "cif": "B-98836885",
+      "telefono": "+34 963 858 534",
+      "email": "info@scalavalencia.com",
+      "web": "www.scalavalencia.com"
+    },
+    "prefijo_numero": "SV",
+    "validez_dias": 30,
+    "firma": {"nombre": "Miguel Baza Velasco", "cargo": "Director Técnico"},
+    "portada": {
+      "nombre_marca": "SCALA VALENCIA",
+      "claim": "REHABILITACIÓN DE EDIFICIOS  ·  RETIRADA DE AMIANTO RERA",
+      "pie": "SCALA VALENCIA  ·  Rehabilitación y Retirada de Amianto",
+      "contacto": "info@scalavalencia.com",
+      "paleta": {
+        "oscuro": "#13223b", "acento": "#3d6b9e", "fondo": "#ffffff", "tarjeta": "#eef1f5", "pista": "#dde3ea",
+        "texto": "#13223b", "texto_tenue": "#6b7686", "texto_claro": "#ffffff", "texto_claro_tenue": "#aebbd0",
+        "serie": ["#13223b", "#3d6b9e", "#8fb0d3", "#5c7d99", "#b9c9dc", "#2a4a70"]
+      },
+      "estilo": {
+        "fuente_titulos": {"regular": "DejaVuSans.ttf", "negrita": "DejaVuSans-Bold.ttf"},
+        "fuente_texto": {"regular": "DejaVuSans.ttf", "negrita": "DejaVuSans-Bold.ttf"},
+        "marca": "centrada", "esquinas": "redondeadas", "filete_acento": false, "total": "oscuro"
+      }
+    },
+    "documento": {
+      "color_principal": "1B3A5C",
+      "color_acento": "1F6FB2",
+      "color_rotulo_sobre_oscuro": "8FB0D3",
+      "color_texto": "1A1A1A",
+      "color_tenue": "6B7686",
+      "fondo_suave": "EEF1F5",
+      "borde_tabla": "B8B8B8",
+      "fondo_cabecera_tabla": "EEEEEE",
+      "fondo_total_tabla": "F6F6F6",
+      "fuente": null
+    },
+    "condiciones_resumen": [
+      ["VALIDEZ", "{validez_dias} días naturales desde fecha de emisión"],
+      ["MEDICIONES", "Orientativas · sujetas a ajuste en obra"],
+      ["EMPRESA", "Certificada RERA para retirada de amianto"],
+      ["PAGO", "10% firma de contrato · resto a convenir"],
+      ["NORMATIVA", "RD 105/2008 · RD 1627/1997 · CTE"]
+    ],
+    "condiciones_generales": [
+      "Validez de la oferta: {validez_dias} días naturales desde la fecha de emisión. Transcurrido dicho plazo los precios quedan sujetos a revisión en función de la variación de costes de materiales y mano de obra.",
+      "Forma de pago: 10% a la firma del contrato. El resto a convenir según avance de obra.",
+      "El presente presupuesto tiene carácter de contradictorio. Las mediciones son orientativas y podrán ajustarse a la realidad de la obra una vez iniciados los trabajos.",
+      "Los trabajos de retirada de amianto (si aplica) se ejecutarán por empresa certificada RERA conforme al RD 396/2006.",
+      "Todos los residuos generados serán gestionados por gestor autorizado conforme al RD 105/2008.",
+      "Los precios incluyen mano de obra, materiales, medios auxiliares, seguridad y salud, y gestión de residuos según desglose.",
+      "Normativa aplicable: CTE, RD 396/2006 (amianto, si aplica), RD 2177/2004 (trabajos en altura) y demás normativa vigente."
+    ],
+    "garantias": {
+      "titulo": "Por qué puede confiar en nosotros",
+      "texto": "15 años de experiencia en rehabilitación de fachadas y retirada de amianto en la Comunitat Valenciana.",
+      "puntos": [
+        ["Empresa RERA certificada", ""],
+        ["ISO 9001 Calidad", ""],
+        ["Seguro RC 2.000.000 €", ""],
+        ["Garantía de obra 10 años", ""]
+      ]
+    },
+    "proximo_paso": {
+      "titulo": "Solicitad la aprobación en vuestra próxima junta de propietarios",
+      "texto": "Podemos asistir a la junta para resolver las dudas de los vecinos y presentar la propuesta en detalle, sin compromiso. Nuestro equipo técnico explicará cada fase de la intervención."
+    },
+    "garantia_cifra": "10 años"
+  },
+  "vertical": {
+    "plantilla": "templates/vertical.docx",
+    "empresa": {
+      "razon_social": "Vertical Projects, S.L.U.",
+      "cif": "B-56972938",
+      "telefono": "963 858 534",
+      "email": "info@verticalprojects.es",
+      "web": "www.verticalprojects.es"
+    },
+    "prefijo_numero": "VP",
+    "validez_dias": 15,
+    "firma": {"nombre": "Miguel Baza Velasco", "cargo": "Director Técnico"},
+    "portada": {
+      "nombre_marca": "VERTICAL PROJECTS",
+      "claim": "TRABAJOS VERTICALES  ·  ACCESO POR CUERDA  ·  FACHADAS",
+      "pie": "VERTICAL PROJECTS  ·  Trabajos Verticales y Accesos Especiales",
+      "contacto": "info@verticalprojects.es   ·   963 858 534",
+      "paleta": {
+        "oscuro": "#1c1917", "acento": "#c9a45c", "fondo": "#ffffff", "tarjeta": "#f6f1e7", "pista": "#e6dccb",
+        "texto": "#1c1917", "texto_tenue": "#7d756b", "texto_claro": "#ffffff", "texto_claro_tenue": "#cfc6b8",
+        "serie": ["#1c1917", "#c9a45c", "#7d756b", "#e2c992", "#5c4a2e", "#a8803f"]
+      },
+      "estilo": {
+        "fuente_titulos": {"regular": "Oswald_400Regular.ttf", "negrita": "Oswald_700Bold.ttf"},
+        "fuente_texto": {"regular": "Lato_400Regular.ttf", "negrita": "Lato_700Bold.ttf"},
+        "marca": "lateral", "esquinas": "rectas", "filete_acento": true, "total": "acento"
+      }
+    },
+    "documento": {
+      "color_principal": "1C1917",
+      "color_acento": "C9A45C",
+      "color_acento_oscuro": "9A7434",
+      "color_texto": "2A2623",
+      "color_tenue": "7D756B",
+      "fondo_suave": "F6F1E7",
+      "borde_tabla": "B8B8B8",
+      "fondo_cabecera_tabla": "EEEEEE",
+      "fondo_total_tabla": "F6F6F6",
+      "fuente": "Lato",
+      "fuente_titulos": "Oswald"
+    },
+    "condiciones_resumen": [
+      ["VALIDEZ", "{validez_dias} días naturales desde fecha de emisión"],
+      ["MEDICIONES", "Orientativas · sujetas a ajuste en obra"],
+      ["PAGO", "10% firma de contrato · resto a convenir"],
+      ["NORMATIVA", "RD 105/2008 · RD 1627/1997 · CTE"]
+    ],
+    "condiciones_generales": [
+      "Validez de la oferta: {validez_dias} días naturales desde la fecha de emisión. Transcurrido dicho plazo los precios quedan sujetos a revisión en función de la variación de costes de materiales y mano de obra.",
+      "Forma de pago: 10% a la firma del contrato. El resto a convenir según avance de obra.",
+      "El presente presupuesto tiene carácter de contradictorio. Las mediciones son orientativas y podrán ajustarse a la realidad de la obra una vez iniciados los trabajos.",
+      "Este presupuesto se ha elaborado sin catas ni exploraciones previas. Los vicios ocultos que aparezcan durante la ejecución se valorarán por separado.",
+      "Todos los residuos generados serán gestionados por gestor autorizado conforme al RD 105/2008.",
+      "Los precios incluyen mano de obra, materiales, medios auxiliares, seguridad y salud, y gestión de residuos según desglose."
+    ],
+    "garantias": {
+      "titulo": "Por qué Vertical Projects",
+      "texto": "Lo que nadie puede alcanzar, nosotros lo hacemos.",
+      "puntos": [
+        ["Sin andamios, sin cortes.", "Las intervenciones en altura se ejecutan mediante acceso por cuerda. Menos impacto, más rapidez, sin licencias de ocupación de vía pública. Trabajos compatibles con el uso diario del inmueble."],
+        ["Técnicos certificados.", "Equipos con formación específica en técnicas verticales y trabajo en altura, conforme al RD 2177/2004 sobre disposiciones mínimas de seguridad."],
+        ["Plenamente asegurados.", "Seguro de responsabilidad civil de 2.000.000 € a disposición de la propiedad. Documentación de coberturas disponible a solicitud."],
+        ["Transparencia total.", "Lo que lees es lo que pagas. Sin costes ocultos. Cualquier modificación durante la obra requiere orden de cambio firmada por la propiedad."]
+      ]
+    },
+    "proximo_paso": {
+      "titulo": "Aceptación de la oferta",
+      "texto": "Para formalizar el encargo, remitid este documento firmado y sellado a info@verticalprojects.es. Os contactaremos para coordinar la fecha de inicio y los accesos al edificio."
+    },
+    "garantia_cifra": null
+  }
+}

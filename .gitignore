@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+/pruebas/
+*.docx
+*.pdf
+!presupuestos-scala-vertical/templates/*.docx
