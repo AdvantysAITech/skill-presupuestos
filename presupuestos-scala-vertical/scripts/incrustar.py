@@ -36,15 +36,19 @@ from typing import Optional
 
 from PIL import Image, ImageOps
 
-VERSION_SKILL = "1.1.0"
+VERSION_SKILL = "1.1.1"
 ESQUEMA = 1
 
 RUTA_DATOS = "advantys/datos.json"
 RUTA_PORTADA = "advantys/portada-fuente.jpg"
 
-# La portada se dibuja a 1860 px de ancho (portada.py, ANCHO_SALIDA).
-LADO_PORTADA = 2000
-CALIDAD_PORTADA = 82
+# La portada se dibuja a 1860 px de ancho (portada.py, ANCHO_SALIDA); en Vertical la foto
+# ocupa unos 1200 px. 1600 px a calidad 80 se ve nítida impresa y pesa ~0,5 MB en fotos
+# con mucha textura: cada KB que ocupa se resta del margen de las fotos del anexo.
+LADO_PORTADA = 1600
+CALIDAD_PORTADA = 80
+# Marca en el comentario JPEG para reconocer una portada-fuente ya preparada.
+MARCA_PORTADA = b"advantys-portada-fuente"
 
 TIPOS_CONTENIDO = {
     RUTA_DATOS: "application/json",
@@ -63,20 +67,21 @@ class ErrorRevision(Exception):
 def portada_fuente(ruta: Optional[str]) -> Optional[bytes]:
     """JPEG de la foto de portada con el lado largo a LADO_PORTADA px como máximo.
 
-    Si la foto ya es un JPEG de ese tamaño o menor (caso de una regeneración, que parte
-    de la portada-fuente incrustada), se devuelve tal cual para no recomprimirla cada vez.
+    Si la foto ya es una portada-fuente preparada por esta función (caso de una regeneración),
+    se devuelve tal cual para no recomprimirla cada vez que se previsualiza.
     """
     if not ruta or not os.path.exists(ruta):
         return None
     try:
         with Image.open(ruta) as im:
-            if im.format == "JPEG" and max(im.size) <= LADO_PORTADA:
+            if im.format == "JPEG" and im.info.get("comment") == MARCA_PORTADA:
                 with open(ruta, "rb") as fh:
                     return fh.read()
             im = ImageOps.exif_transpose(im).convert("RGB")
             im.thumbnail((LADO_PORTADA, LADO_PORTADA), Image.LANCZOS)
             buf = io.BytesIO()
-            im.save(buf, "JPEG", quality=CALIDAD_PORTADA, optimize=True, progressive=True)
+            im.save(buf, "JPEG", quality=CALIDAD_PORTADA, optimize=True, progressive=True,
+                    comment=MARCA_PORTADA)
             return buf.getvalue()
     except Exception:
         return None
