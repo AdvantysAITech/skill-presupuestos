@@ -1,0 +1,7 @@
+.git
+pruebas
+herramientas
+**/__pycache__
+*.docx
+*.pdf
+!presupuestos-scala-vertical/templates/*.docx
