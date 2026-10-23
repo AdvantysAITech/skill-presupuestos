@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import copy
 import datetime as dt
+import hashlib
 import io
 import json
 import os
@@ -65,6 +66,9 @@ ANCHO_FOTO_CM, ALTO_FOTO_CM = 16.0, 10.5
 UNIDADES_MEDIBLES = {"m", "ml", "m²", "m2", "m³", "m3", "kg", "h", "día", "días", "mes"}
 
 AVISOS: list[str] = []
+# Ruta de cada foto del anexo -> SHA-1 de los bytes JPEG que se insertan en el .docx.
+# Lo usa incrustar.py para saber en qué archivo de word/media/ ha acabado cada foto.
+REGISTRO_FOTOS: dict[str, str] = {}
 
 
 # ---------------------------------------------------------------------------
@@ -401,6 +405,7 @@ def foto_comprimida(ruta: str, lado: int, calidad: int):
     im.thumbnail((lado, lado), Image.LANCZOS)
     buf = io.BytesIO()
     im.save(buf, "JPEG", quality=calidad, optimize=True, progressive=True)
+    REGISTRO_FOTOS[ruta] = hashlib.sha1(buf.getvalue()).hexdigest()
     buf.seek(0)
     return buf, im.size
 
