@@ -59,6 +59,8 @@ El script imprime el PEM, el IVA, el total, el subtotal de cada capítulo, las p
 
 El documento se mantiene por debajo de ~3,6 MB para poder subirlo a la aplicación: el script comprime las fotos automáticamente. Si avisa de que se pasa, quita fotos y vuelve a generarlo.
 
+El script incrusta dentro del .docx los datos con los que se ha generado y la foto de portada (`scripts/incrustar.py`). Con ellos, dirección revisa y corrige el presupuesto en la aplicación sin volver a Claude. No hay que hacer nada para que se incrusten, pero sí respetar la regla de cambios de abajo.
+
 ## Estructura del JSON
 
 Ejemplos completos en `examples/ejemplo_scala.json` y `examples/ejemplo_vertical.json`.
@@ -129,6 +131,7 @@ Notas de los campos:
 
 ## Reglas fijas
 
+- **Cualquier cambio** (precios, textos, partidas, IVA, fotos) se hace modificando el JSON y volviendo a ejecutar `generar.py`. Nunca edites el .docx generado, ni con python-docx ni de ninguna otra forma: un .docx retocado ya no coincide con sus datos incrustados y la aplicación no deja revisarlo.
 - Un documento es de una sola empresa: nunca mezcles datos, colores ni textos de la otra. No menciones Scala Valencia en documentos de Vertical Projects.
 - Vertical Projects no presupuesta retirada de amianto: si el encargo lo incluye, avísalo en el chat para derivarlo a Scala Valencia.
 - Retirada de amianto (Scala): incluye capítulo de gestión de residuos; las condiciones ya citan RERA y el RD 396/2006.
@@ -141,7 +144,7 @@ Notas de los campos:
 
 ## Al entregar
 
-Entrega el .docx y escribe en el chat un resumen breve: número, cliente, total con el IVA aplicado, margen y base, partidas pendientes de precio, qué precios vienen de CYPE y cuáles son estimados, alertas (y si van en el documento) y cualquier aviso del script. Ese resumen no va dentro del documento.
+Entrega el .docx y recuerda al comercial que lo suba a la aplicación tal cual: puede abrirlo en Word para verlo, pero si lo guarda, la aplicación ya no podrá revisarlo. Escribe también en el chat un resumen breve: número, cliente, total con el IVA aplicado, margen y base, partidas pendientes de precio, qué precios vienen de CYPE y cuáles son estimados, alertas (y si van en el documento) y cualquier aviso del script. Ese resumen no va dentro del documento.
 
 ## Personalizar
 
