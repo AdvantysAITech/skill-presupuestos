@@ -48,6 +48,7 @@ except Exception:
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from portada import a_frase, generar_portada, generar_portada_vertical  # noqa: E402
+from incrustar import incrustar, portada_fuente  # noqa: E402
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NS_W = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
@@ -997,19 +998,29 @@ def main():
         from vertical import ConstructorVertical
         clase = ConstructorVertical
 
+    # Datos incrustados (incrustar.py): la foto de portada a resolución de portada y el
+    # datos.json. Se reserva su peso para que el .docx final no pase de LIMITE_BYTES.
+    portada_bytes = portada_fuente(foto_portada)
+    reserva = len(portada_bytes or b"") + 100_000
+
     for intento, ajuste in enumerate(AJUSTES_FOTO):
         doc = clase(datos, marca, calc, fechas, ajuste).montar(ruta_portada, fotos)
         buf = io.BytesIO()
         doc.save(buf)
         tamano = buf.tell()
-        if tamano <= LIMITE_BYTES or not fotos or intento == len(AJUSTES_FOTO) - 1:
+        if tamano + reserva <= LIMITE_BYTES or not fotos or intento == len(AJUSTES_FOTO) - 1:
             break
+
+    contenido, avisos_incrustar = incrustar(buf.getvalue(), datos, calc, fechas, fotos, REGISTRO_FOTOS,
+                                            portada_bytes)
+    AVISOS.extend(avisos_incrustar)
+    tamano = len(contenido)
     if tamano > LIMITE_BYTES:
         AVISOS.append(f"El documento ocupa {tamano / 1e6:.1f} MB: puede superar el límite de subida de la aplicación. "
                       "Quita algunas fotos y vuelve a generarlo.")
     os.makedirs(os.path.dirname(os.path.abspath(salida)), exist_ok=True)
     with open(salida, "wb") as fh:
-        fh.write(buf.getvalue())
+        fh.write(contenido)
 
     print(f"OK  Presupuesto generado: {salida}")
     print(f"    Tamaño: {tamano / 1e6:.2f} MB · fotos en el anexo: {len(fotos)} (lado {ajuste[0]} px, calidad {ajuste[1]})")
